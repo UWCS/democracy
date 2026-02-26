@@ -11,6 +11,6 @@ Results are as follows, in the following format: OUTCOME (for-against-abstain)
 - **Limit Joint Candidacy to 2:** PASSED (47-8-3)
 - **Remove Joint Candidacy:** FAILED (25-32-3)
 - **Ban Video Games from FNG:** FAILED (23-39-3)
-- **Add Postgraduate:** FAILED (Inquorate)
+- **Add Postgraduate:** FAILED - INQUORATE (38-0-6)
 - **Circle:** PASSED (37-8-15)
 - **What the Fuck Should We Buy:** Switch 2
