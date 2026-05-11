@@ -1,4 +1,4 @@
-\usepackage[a4paper, left=25mm, right=25mm, top=25mm, bottom=28mm]{geometry}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=3cm, headheight=12pt]{geometry}
 \usepackage[english]{babel}
 \usepackage{titling}
 
@@ -9,53 +9,71 @@
 \usepackage[scaled]{beramono}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
+\usepackage{xspace}
 
 \setlength{\droptitle}{-1.5cm}
-\setlist[enumerate]{after={\medskip}}
+\setlist[enumerate]{after={\medskip}, leftmargin=1.5cm}
 
-% Custom numbering format
-\renewcommand{\labelenumi}{\arabic{section}.\arabic{enumi}}
-\renewcommand{\labelenumii}{\arabic{section}.\arabic{enumi}.\arabic{enumii}}
-\renewcommand{\labelenumiii}{\arabic{section}.\arabic{enumi}.\arabic{enumii}.\alph{enumiii}}
+\renewcommand{\theenumi}{\emph{\arabic{section}.\arabic{enumi}}}
+\renewcommand{\theenumii}{\theenumi\emph{.\arabic{enumii}}}
+\renewcommand{\theenumiii}{\theenumii\emph{.\alph{enumiii}}}
+\renewcommand{\theenumiv}{\theenumiii\emph{.\roman{enumiv}}}
+
+\renewcommand{\labelenumi}{\emph{\theenumi.}}
+\renewcommand{\labelenumii}{\emph{\theenumii.}}
+\renewcommand{\labelenumiii}{\emph{\theenumiii.}}
+\renewcommand{\labelenumiv}{\emph{\theenumiv.}}
+
+\newcommand{\eref}[1]{\emph{\ref{#1}}}
+
+\newcommand{\exec}{\hyperref[sec:exec]{Executive Committee}\xspace}
 
 \makeatletter
-% Subsection-like list items
-\newcommand*\itemb[1]{{\large\bfseries \item #1}}
-\newcommand*\itembb[1]{{\bfseries \item #1}}
 
-% Role environment, avoids line breaking between title and list
-\newenvironment{role}[1]{
-    \itembb{#1}\nolinebreak
+% Subsection-like list items
+\newcommand*\itemb[1]{\item {\large\bfseries #1}}
+\newcommand*\itembb[1]{\item {\bfseries #1}}
+\newcommand*\hyr[2]{\hyperref[#1]{#2}}
+
+\newenvironment{role}[2]{
+    \itembb{#1}\label{#2}\nolinebreak
     \begin{enumerate}
 }{\end{enumerate}\penalty-100}
 
 % Adjust spacing around non list item
 \newcommand*\doublelistbreak[1]{
-\vspace{-2\medskipamount}
-\vspace{-\baselineskip}
-#1
-\vspace{-\medskipamount}
-\vspace{-\baselineskip}
+    \vspace{4pt}
+    #1
+    \vspace{-\baselineskip}
 }
 
 % Include UWCS logo in title
-\renewcommand\maketitle{
+\renewcommand\maketitle[1][Date Renewed]{
 \noindent\begin{minipage}{0.2\textwidth}
     \includegraphics[width=\linewidth]{logo.png}
 \end{minipage}%
 \hfill%
 \begin{minipage}{0.79\textwidth}
     \begin{center}
-        {\Huge \bfseries \sffamily \@title }\\[1ex]
-        Date Renewed \@date\\[4ex] 
+        {\Huge \bfseries \sffamily \@title}\\[1ex]
+        \emph{#1 \@date}\\[4ex] 
     \end{center}
 \end{minipage}
 }
+
+% clear default prefixes for nested enums
+\renewcommand{\p@enumii}{}
+\renewcommand{\p@enumiii}{}
+\renewcommand{\p@enumiv}{}
 \makeatother
 
 \graphicspath{{common/}}
 \pagestyle{empty}
 \setkomafont{section}{\usefont{T1}{fvs}{b}{n}\Large}
+\RedeclareSectionCommand[
+  beforeskip=-1.5pt,
+  afterskip=0pt
+]{section}
 
 \renewcommand{\arraystretch}{1.5}
 
