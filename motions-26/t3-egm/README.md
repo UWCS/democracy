@@ -7,6 +7,6 @@
 ## Non-constitutionally changing motions
 - Kill The pig (*Proposed by Bharat Haria, Seconded by Jake Lu*): **PASSED** (**21 *for***, 14 *against*, 5 *abstain*)
 
-\* Per SU By-law 521b, motions that change the constitution do *not* pass in the event of a tie.
+\* Per SU By-law 521a, motions that change the constitution do *not* pass in the event of a tie.
 
 Quorum for all motions was 31, all of the above met quorum.
