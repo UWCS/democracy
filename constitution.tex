@@ -68,7 +68,7 @@
 
 \section{Cost of Membership}
     \begin{enumerate}
-        \item Standard Membership of the Society shall be free, or £0.00.
+        \item Standard Membership of the Society shall be free, or £0.00. \emph{On 1 September each year, the standard membership fee shall increase by the highest of 2.5\%, annual growth in seasonally adjusted average weekly total pay including bonuses in Great Britain over the latest three-month period, and UK Consumer Prices Index twelve-month inflation, using the latest figures published by the Office for National Statistics before that date. Later revisions to those figures shall not change the fee already set for that year.}
 
         \item Associate Membership of the Society shall be £3.00.
     \end{enumerate}
@@ -84,16 +84,21 @@
                 \item Any standard member of the Society who has not joined the Society no less than fourteen days before voting begins.
             \end{enumerate}
 
-        \item For avoidance of doubt, the following roles shall be protected by the following limitations:
+        \item\label{prot-restrictions} For avoidance of doubt, the following roles shall be protected by the following limitations:
             \begin{enumerate}
                     \item\label{frep-restriction} Freshers' Representative positions are recognised as protected positions, restricted to only first year undergraduate members. Voting for Freshers' Representative positions shall be exempt from \hyr{general-quorum}{quorum}.
 
                     \item\label{gender-inclusivity-restriction} \hyr{gender}{Gender Inclusivity Officer} and Gender Inclusivity \hyr{frep}{Freshers' Representative} are recognised as protected positions, restricted to only members who do not self-identify as cisgender men. Voting for \hyr{gender}{Gender Inclusivity Officer} and Gender Inclusivity \hyr{frep}{Freshers' Representative} positions shall be exempt from \hyr{general-quorum}{quorum}.
 
-                    \item\label{ethnic-minority-restriction} \hyr{em}{Ethnic Minorities Rep} positions are recognised as protected positions, restricted to only self-identified Ethnic Minority members. Voting for \hyr{em}{Ethnic Minorities Rep} positions shall be exempt from \hyr{general-quorum}{quorum}.
+                    % RL: Fixed inconsistency: "Rep" --> "Representative"
+                    \item\label{ethnic-minority-restriction} \hyr{em}{Ethnic Minorities Rep} positions are recognised as protected positions, restricted to only self-identified Ethnic Minority members. Voting for \hyr{em}{Ethnic Minorities Representative} positions shall be exempt from \hyr{general-quorum}{quorum}.
+
+                    % RL: Fixed same inconsistency as EM
+                    \item\label{pg-rep-restriction} \hyr{pg}{Postgraduate Representative} positions are recognised as protected positions, restricted to only Postgraduate members. Voting for \hyr{pg}{Postgraduate Representative} positions shall be exempt from \hyr{general-quorum}{quorum}.
             \end{enumerate}
 
-        \item Defined restrictions in~\ref{frep-restriction} \&~\ref{gender-inclusivity-restriction} \&~\ref{ethnic-minority-restriction} additionally apply to members' eligibility to:
+        % RL: Tweaked to just come out as "7.3" rather than "7.3.1 - 7.3.4" - serves no use to have it expanded and the LaTeX for it will be annoying
+        \item Defined restrictions in~\ref{prot-restrictions} additionally apply to members' eligibility to:
             \begin{enumerate}
                 \item Nominate for the positions
                 \item Hold the positions
@@ -119,6 +124,13 @@
         \item\label{general-quorum} Quorum for General Meetings or By-Elections shall be equivalent to 7\% of Society Membership.
 
         \item\label{exec-quorum} Quorum for \exec votes shall be equivalent to 50\% + 1 of the \exec. Such votes should have a minimum time period of 72 hours, with exceptions for urgent time-sensitive matters.
+
+        \item Vacant seats must require the passing of a \hyr{exec-quorum}{quorate} vote of the \exec to begin the co-option process, in addition to adhering to requirement laid out by SU governance. The outcome of such a vote must be made available to all members within 7 days, and before continuing the co-option process.
+
+        \item Candidates for co-option must be determined by a nomination period open to members who would be eligible to nominate in a General Meeting or by-election, for a minimum of 7 days.
+
+        % RL: corrected typos: "member" --> "members", "fulfill" --> "fulfil"
+        \item \exec votes on nominees for co-option must pass and be \hyr{exec-quorum}{quorate} for the co-option to proceed, and the outcome of the vote must be made available to all members within 7 days, before the nominee can fulfil the position.
     \end{enumerate}
 
 \section{Executive Committee}\label{sec:exec}
@@ -146,6 +158,7 @@
         
         \item\label{seats-rule} Each position shall be filled:
             % RL: Sanity check - 16 roles present here; matches up with https://github.com/UWCS/stardust/blob/318c3a413e237912d2a2b2dd31aa79953bfcfa25/data/roles.toml#L201
+                % ignoring bbq which isn't on there yet
             \begin{enumerate}
                 \item By one (1) seat:
                     \begin{enumerate}
@@ -158,6 +171,7 @@
                         \item \hyr{em}{Ethnic Minorities Rep}
                         \item \hyr{pg}{Postgraduate Rep}
                         \item \hyr{outreach}{Outreach Officer}
+                        \item \hyr{bbq}{Barbecue Officer}
                     \end{enumerate}
                 \item By up to two (2) seats:
                     \begin{enumerate}
@@ -178,11 +192,10 @@
                 
                 \item Additional positions should be filled in accordance with~\ref{vacant-rule}.
             \end{enumerate}
-        
+
         % RL: Note of interest - why *incoming* exec, that's non-sensical. Either just "\exec Committee" or DRO/equivalent seems more appropriate (probs latter since they're the one responsible for running the election)
             % changed exec --> \exec Committee, kept "incoming" for now
         \item\label{vacant-rule} Should a position not reach its quota as defined in~\ref{seats-rule}, if its elections are \hyr{general-quorum}{not quorate}, or if Re-Open Nominations (R.O.N) wins the election, the incoming \exec should treat the empty position as a vacant slot.
-        
         % RL: Removed zombie left-over wording of "This selection cannot pass a vote to Re-Open Nominations"
 
         \itemb{Additional Seats}
@@ -199,7 +212,7 @@
 
                 \item Additional seats will not be cumulative, and will be reset with each subsequent Annual General Meeting (AGM).
             \end{enumerate}
-        
+
         \itemb{Core Officers}
             \begin{enumerate}
                 \item The Core Officer Duties shall include:
@@ -228,7 +241,7 @@
                 \item The President will aim to promote strong \exec cohesion, individual agency and where appropriate, accountability. 
             \end{role}
 
-            \begin{role}{Treasurer}{treasurer}
+            \begin{role}{Treasurer / Bursar of the Computers}{treasurer}
                 \item The Treasurer is responsible for the finances of the Society.
 
                 \item The Treasurer will maintain an up-to-date record of their group account in addition to the record kept by the SU Finance Office.
@@ -297,7 +310,7 @@
 
                     \item The Freshers' Representative for each category will assist with and be supported by their relevant \exec members in the planning and running of events they perceive as relevant to their year, along with the general activities of the Society.
 
-                    \item This office will be elected in an Extraordinary General Meeting (EGM) or By-Election run between Weeks 1 to 5 of Term 1.
+                    \item This office will be elected in an Extraordinary General Meeting (EGM) or By-Election run between Week 1 and Week 5 of Term 1.
                 \end{role}
 
                 \begin{role}{Gaming Coordinator}{gaming}
@@ -320,7 +333,7 @@
                     \item The Publicity Officer is responsible for creating graphics for Society announcements and operation.
                 \end{role}
                 
-                \begin{role}{Secretary}{sec}
+                \begin{role}{Secretary / Keeper of the Minutes}{sec}
                     \item The Secretary will act as the point of contact for general enquiries with the Society.
 
                     \item The Secretary will take minutes of every Society \exec meeting and publish them to all members on the Society website within one week of the meeting taking place. This responsibility also includes the minuting of Society General Meetings, such as the Annual General Meeting.
@@ -349,9 +362,39 @@
                 \begin{role}{Technical Officer}{tech}
                     \item The Technical Officer will oversee the running of the digital and physical services offered by the Society.
 
+                    \item The Technical Officer must proactively ensure the technical infrastructure of the Society is secured, including, but not limited to:
+                        \begin{enumerate}
+                            \item Regular updates, patches and migration across \emph{all} services where possible, aiming for a weekly cadence, aided by utilisation of appropriate automations.
+
+                            \item Enabling and frequent auditing of access across the whole infrastructure, with appropriate action to prevent unauthorised access or misuse.
+
+                            \item Responsible timely disclosure of applied mitigations to members, and relevant teams such as DCS Tech and IDG Vulnerability Management, where such disclosures would not adversely impact the security of the technical infrastructure.
+
+                            \item Where applicable, sharing best practice advice \& instructions on remedial action for members.
+                        \end{enumerate}
+
                     \item The Technical Officer will appropriately document all projects and services, such that they are accessible to all members, and maintainable for future Technical Officers.
 
-                    \item The Technical Officer will disclose any planned maintenance periods for Society services at least 7 days before maintenance is to begin except in circumstances where information on timelines, such as maintenance in the Department of Computer Science, or other areas of the University, are not concretely established at the 7 day cut-off.
+                    \item The Technical Officer must ensure the functioning of regular backups across the infrastructure.
+
+                    \item The Technical Officer must audit retention of services \& data across the whole infrastructure at least once during the Executive cycle, with appropriate measures to backup and clean-up unused data and services.
+
+                    \item Data \& services of third parties, such as members and other societies, shall be deemed ``unused'' if offline for more than 6 months, at the request of the relevant third party, or otherwise at the discretion of the Technical Officer. A backup of the data must be made available to the third party, following reasonable attempts to contact them, for a minimum of 7 days before completing clean-ups.
+
+                    \item The Technical Officer will disclose maintenance/outages of the technical infrastructure to members, subject to the following:
+                        \begin{enumerate}
+                            \item Planned maintenance at least 7 days ahead of commencing maintenance.
+
+                            \item Unplanned maintenance \& outages at most 3 days after commencing of maintenance/outage - a brief interim status update is permissible.
+
+                            \item Completed maintenance and restoration of services, at most 3 days after completion.
+
+                            \item Where the outlined timelines cannot be met, all possible disclosures will be made in a timely manner, with relevant transparency to members to be made within the timelines as to why they cannot be met.
+
+                            \item For issues majorly impacting the functioning of the technical infrastructure or compromising its security, maintenance may proceed with less or no prior notice.
+
+                            \item Limitations may apply to whether a disclosure is made, and the extent of the disclosure, where such a disclosure is deemed to have an adverse impact on the security of the technical infrastructure.
+                        \end{enumerate}
 
                     \item The Technical Officer will be the point of contact for recording of event sessions.
                 \end{role}
@@ -383,7 +426,7 @@
                     \item The Postgraduate Representative will help and create a welcoming atmosphere for Postgraduate members of the Society by hosting varied events to create community with support from the \exec.
 
                     % RL: Fixed inconsistency with application of wording (lacked intended parity with frep)
-                    \item This office will be elected in a by-election or Extraordinary General Meeting (EGM) run between Week 1 to 5 of Term 1.
+                    \item This office will be elected in a by-election or Extraordinary General Meeting (EGM) run between Week 1 and Week 5 of Term 1.
 
                     \item The Postgraduate Representative will hold their position until the reset of Society Memberships at the start of September, such that they act as a continuing point of contact in the interim between the AGM and the next Postgraduate Representative elections in Term 1.
                 \end{role}
@@ -394,6 +437,10 @@
 
                     \item The Outreach Officer will be responsible for ensuring communication with external stakeholders is done in a timely and professional manner.
                 \end{role}
+
+                \begin{role}{Barbecue Officer}{bbq}
+                    \item The Barbecue Officer will be responsible for coordinating the Computing Barbecue events.
+                \end{role}
             \end{enumerate}
     \end{enumerate}
 
@@ -403,8 +450,9 @@
             \begin{enumerate}
                 \item Is \textbf{not} part of the \exec.
                 \item Shows official capacity in managing Society technical matters.
-                \item Is automatically granted to serving \hyr{tech}{Tech Officers}.
-                \item Shall be granted, subject to a vote by serving \hyr{tech}{Tech Officers}, to requesting members.
+                % RL: Corrected Tech --> Technical
+                \item Is automatically granted to serving \hyr{tech}{Technical Officers}.
+                \item Shall be granted, subject to a vote by serving \hyr{tech}{Technical Officers}, to requesting members.
                 \item Shall be recognised by the Sysadmin role on the \href{https://discord.uwcs.uk}{Society's Discord server}.
             \end{enumerate}
         \item The Tech Team shall be comprised of Sysadmins.
