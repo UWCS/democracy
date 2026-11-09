@@ -9,6 +9,7 @@
 \usepackage[scaled]{beramono}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
+\usepackage{refcount}
 \usepackage{xspace}
 
 \setlength{\droptitle}{-1.5cm}
@@ -26,7 +27,35 @@
 
 \newcommand{\eref}[1]{\emph{\ref{#1}}}
 
-\newcommand{\exec}{\hyperref[sec:exec]{Executive Committee}\xspace}
+% anchor link to the Executive Committee section for first appearance in group only
+% basically so there's not ugly rendering hyperlinking *every* mention of it when using \exec for consistency
+\newcount\execLinkLevel
+\execLinkLevel=-1\relax
+
+\ExplSyntaxOn
+\cs_new:Npn \ifexecsectionTF #1#2 {
+    \str_if_eq:eeTF
+        { \getrefbykeydefault{sec:exec}{anchor}{} }
+        { section.\theHsection }
+        {#1} {#2}
+}
+\ExplSyntaxOff
+
+\newcommand{\exec}{%
+    \ifexecsectionTF{Executive Committee}{%
+        \ifnum\execLinkLevel=\currentgrouplevel\relax
+            Executive Committee%
+        \else
+            \execLinkLevel=\currentgrouplevel\relax
+            \hyperref[sec:exec]{Executive Committee}%
+        \fi
+    }%
+    \xspace
+}
+
+% uncomment if you want to reset link count per item for whatever reason - ie would effectively only not hyperlink for multiple mentions in a single item
+%\AddToHook{cmd/item/before}{\execLinkLevel=-1\relax}
+\AddToHook{cmd/section/before}{\execLinkLevel=-1\relax}
 
 \makeatletter
 
