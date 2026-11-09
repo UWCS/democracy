@@ -2,7 +2,7 @@
 
 These motions were presented and voted on at the AGM on Thursday 29th February 2024 (Week 8).
 
-Results (for, abstain, against):
+Results (for, abstain, against) - all constitutionally changing:
 **Fresher Rep Motion** - Passed, (58, 5, 5)
 **Motherboard Motion** - Passed, (55, 5, 8)
 **Positions Motion** - Rejected, (14, 17, 28)
