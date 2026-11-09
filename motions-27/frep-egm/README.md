@@ -26,6 +26,6 @@ Note: Per the SU's *[Society and Club Election Rules](https://www.warwicksu.com/
 
 
 ## Additional notes
-- Quorum in this election was **25**, which all of the above motions satisfied.
+- Quorum in this election was **36**, which all of the above motions satisfied.
 - All motions were conducted using First Past The Post (FPTP), with options "For", "Against" and "Abstain" present.
 - One non-constitionally-changing motion, entitled *Motion to Estabilish the Society as Its Own Official Sponsor*, was withdrawn at the request of the proposer.
